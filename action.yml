@@ -156,7 +156,7 @@ inputs:
   openai_heavy_model:
     required: false
     description: 'Model to use for complex tasks such as code reviews.'
-    default: 'gpt-3.5-turbo'
+    default: 'gpt-4'
   openai_model_temperature:
     required: false
     description: 'Temperature for GPT model'
@@ -220,7 +220,7 @@ inputs:
         - Optimization
         - Best practices: DRY, SOLID, KISS
 
-      Do not comment on minor code style issues, missing 
+      Please don't comment on minor code style issues, or missing 
       comments/documentation. Identify and resolve significant 
       concerns to improve overall code quality while deliberately 
       disregarding minor issues.
