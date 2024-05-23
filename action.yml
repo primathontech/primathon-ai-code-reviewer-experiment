@@ -178,28 +178,6 @@ inputs:
     required: false
     description: 'How many concurrent API calls to make to GitHub?'
     default: '6'
-  organization_practices:
-    required: false
-    description: 'Specific practices followed by the organization'
-    default: |
-      ## Organization Practices
-      
-      ### Project Naming Conventions
-      - Consistent naming conventions are crucial for readability and maintainability.
-      - File and folder naming: Use kebab-case.
-      - Component naming: Use PascalCase.
-      - Route naming: Use kebab-case.
-      - Variable, function, and props naming: Use camelCase.
-      - Constant naming: Uppercase with underscores.
-      - Asset folder naming: Lowercase plural.
-      
-      ### Code Documentation Guidelines
-      - Include clear comments for complex logic.
-
-  project_type:
-    required: false
-    description: 'Type of project: react or angular'
-    default: 'react'
   system_message:
     required: false
     description: 'System message to be sent to OpenAI'
@@ -224,15 +202,6 @@ inputs:
       comments/documentation. Identify and resolve significant 
       concerns to improve overall code quality while deliberately 
       disregarding minor issues.
-
-      {% if inputs.organization_practices %}
-      Additionally, follow these organization-specific practices:
-      {{ inputs.organization_practices }}
-      {% endif %}
-
-      {% if inputs.project_type %}
-      If the project type is {{ inputs.project_type }}, apply the relevant best practices and recommendations for {{ inputs.project_type }} projects.
-      {% endif %}
   summarize:
     required: false
     description: 'The prompt for final summarization response'
@@ -270,5 +239,5 @@ inputs:
     description: 'The icon for the bot'
     default: '<img src="https://avatars.githubusercontent.com/u/135949086?s=41" alt="Image description" width="20" height="20">'
 runs:
-  using: 'node20'
+  using: 'node16'
   main: 'dist/index.js'
