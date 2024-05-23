@@ -270,5 +270,5 @@ inputs:
     description: 'The icon for the bot'
     default: '<img src="https://avatars.githubusercontent.com/u/135949086?s=41" alt="Image description" width="20" height="20">'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
