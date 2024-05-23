@@ -81,7 +81,8 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: primathontech/primathon-ai-code-reviewer@main
+      - name: PR Review & Summary Bot with AI and Chat Features Experimental
+        uses: primathontech/primathon-ai-code-reviewer-experimental@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -241,7 +242,8 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: primathontech/primathon-ai-code-reviewer@main
+      - name: PR Review & Summary Bot with AI and Chat Features Experimental
+        uses: primathontech/primathon-ai-code-reviewer-experimental@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
