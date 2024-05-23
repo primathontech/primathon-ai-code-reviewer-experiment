@@ -89,6 +89,8 @@ IMPORTANT: Entire response must be in the language with ISO code: ${options.lang
         response = await pRetry(() => this.api!.sendMessage(message, opts), {
           retries: this.options.openaiRetries
         })
+        // eslint-disable-next-line no-console
+        console.log('## chat_ response', response)
       } catch (e: unknown) {
         if (e instanceof ChatGPTError) {
           info(
