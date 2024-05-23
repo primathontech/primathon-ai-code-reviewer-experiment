@@ -1,4 +1,4 @@
-name: 'PR Review & Summary Bot with AI and Chat Features'
+name: 'PR Review & Summary Bot with AI and Chat Features Experimental'
 description: 'AI bot for automated PR reviews and summaries with chat for interactive feedback.'
 branding:
   icon: 'git-merge'
