@@ -430,6 +430,19 @@ ${filename}: ${summary}
     } else {
       let message = '### Summary by PrimathonAICodeReviewer\n\n'
       message += releaseNotesResponse
+
+      // Update the token of the PR with the release notes
+      let bot = '\n\n### Token Used\n\n'
+      bot += `\n\n
+      | Filename | Prompt Tokens | Completion Tokens | Total Tokens |
+      |----------|----------|----------|----------|
+      | filename1 | 0 | 0 | 0 |
+      | filename2 | 0 | 0 | 0 |
+      | filename3 | 0 | 0 | 0 |
+      | filename4 | 0 | 0 | 0 |
+      \n\n`
+
+      message += bot
       try {
         await commenter.updateDescription(
           context.payload.pull_request.number,
