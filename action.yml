@@ -237,8 +237,7 @@ inputs:
 
       - **Walkthrough**: A high-level summary of the overall change instead of 
         specific files within 80 words.
-      - **Changes**: A markdown table of files and their summaries. Group files 
-        with similar changes together into a single row to save space.
+      - **Changes**: A markdown table of files, their summaries, and the number of tokens used per file. Group files with similar changes together into a single row to save space.
       - **Poem**: Below the changes, include a whimsical, short poem written by 
         a rabbit to celebrate the changes. Format the poem as a quote using 
         the ">" symbol and feel free to use emojis where relevant.
